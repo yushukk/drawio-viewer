@@ -19,34 +19,31 @@ export class EditorToolbar {
     toolbar.id = 'drawio-editor-toolbar';
     toolbar.style.cssText = `
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #2c3e50;
-      color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      top: 1px;
+      right: 5px;
+      background: transparent;
       z-index: 10000;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      transition: all 0.3s ease;
     `;
 
     toolbar.innerHTML = `
       <button id="copy-xml-btn" style="
-        padding: 12px 20px;
-        background: #3498db;
+        padding: 3px 12px;
+        background: rgba(52, 152, 219, 0.9);
         color: white;
         border: none;
-        border-radius: 8px;
+        border-radius: 6px;
         cursor: pointer;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
         transition: all 0.2s;
         display: flex;
         align-items: center;
-        gap: 8px;
-        box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+        gap: 6px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
       ">
-        <span style="font-size: 18px;">📋</span>
+        <span style="font-size: 14px;">📋</span>
         <span>复制 XML</span>
       </button>
     `;
@@ -59,14 +56,14 @@ export class EditorToolbar {
     if (copyBtn) {
       copyBtn.addEventListener('click', () => this.handleCopyXML());
       copyBtn.addEventListener('mouseenter', () => {
-        copyBtn.style.background = '#2980b9';
-        copyBtn.style.transform = 'translateY(-2px)';
-        copyBtn.style.boxShadow = '0 4px 12px rgba(52, 152, 219, 0.4)';
+        copyBtn.style.background = 'rgba(41, 128, 185, 0.95)';
+        copyBtn.style.transform = 'translateY(-1px)';
+        copyBtn.style.boxShadow = '0 3px 8px rgba(0, 0, 0, 0.3)';
       });
       copyBtn.addEventListener('mouseleave', () => {
-        copyBtn.style.background = '#3498db';
+        copyBtn.style.background = 'rgba(52, 152, 219, 0.9)';
         copyBtn.style.transform = 'translateY(0)';
-        copyBtn.style.boxShadow = '0 2px 8px rgba(52, 152, 219, 0.3)';
+        copyBtn.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.2)';
       });
     }
 
