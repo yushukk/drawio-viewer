@@ -1,5 +1,6 @@
 import { isDrawioXML, extractDrawioXML, validateXMLStructure } from '@/utils/xmlValidator';
-import { createRenderer } from '@/utils/renderer';
+import { DrawioModeManager } from '@/utils/modeManager';
+import { RenderMode } from '@/utils/types';
 
 export default defineContentScript({
   matches: ['<all_urls>'],
@@ -163,24 +164,19 @@ function storeXMLContent(xmlContent: string): void {
 
 /**
  * 渲染 draw.io 图形
+ * 使用模式管理器，支持 Viewer 和 Editor 模式切换
  */
 async function renderDrawioDiagram(xmlContent: string): Promise<void> {
   try {
-    console.log('Starting diagram rendering...');
+    console.log('Starting diagram rendering with mode manager...');
 
-    const renderer = createRenderer();
+    // 创建模式管理器
+    const modeManager = new DrawioModeManager();
 
-    await renderer.render({
-      xmlContent,
-      onProgress: (progress) => {
-        console.log(`Rendering progress: ${progress}%`);
-      },
-      onError: (error) => {
-        console.error('Rendering error:', error);
-      },
-    });
+    // 默认使用编辑模式（预览模式已隐藏）
+    await modeManager.initialize(xmlContent, RenderMode.EDITOR);
 
-    console.log('✓ Diagram rendering completed');
+    console.log('✓ Diagram rendering completed with mode switching support');
   } catch (error) {
     console.error('Failed to render diagram:', error);
     throw error;

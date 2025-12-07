@@ -10,12 +10,12 @@ export default defineConfig({
     host_permissions: ['<all_urls>'],
     web_accessible_resources: [
       {
-        resources: ['viewer/*'],
+        resources: ['viewer/*', 'drawio-editor/*'],
         matches: ['<all_urls>'],
       },
     ],
     content_security_policy: {
-      extension_pages: "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'",
+      extension_pages: "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; frame-src 'self'",
     },
   },
 });
