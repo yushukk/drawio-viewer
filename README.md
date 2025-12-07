@@ -4,102 +4,106 @@
 [![WXT](https://img.shields.io/badge/Built%20with-WXT-blue)](https://wxt.dev)
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/yushukk/drawio-viewer/releases)
 
-一个注重隐私的浏览器扩展，可在浏览器中本地编辑 draw.io 图表文件，无需将数据发送到外部服务器。
+English | [简体中文](README.zh-CN.md)
 
-## ✨ 核心功能
+A privacy-focused browser extension that allows you to edit draw.io diagram files locally in your browser without sending data to external servers.
 
-- 🎨 **完整编辑器**: 集成完整的 draw.io 编辑器，支持所有编辑功能
-- 📋 **一键复制 XML**: 编辑后可直接复制 XML 到剪贴板
-- 🔒 **隐私优先**: 所有处理都在本地进行 - 不向外部服务器发送任何数据
-- 🚀 **快速轻量**: 使用 draw.io 官方编辑器，响应迅速
-- 🌐 **跨浏览器**: 支持 Chrome、Edge 和其他基于 Chromium 的浏览器
-- 📁 **多格式支持**: 支持 `.drawio`、`.drawio.xml` 和 `.dio` 文件
-- 🎯 **智能检测**: 自动检测 GitHub、GitLab 等平台上的 draw.io 文件
-- 💻 **完全离线**: 安装后可完全离线使用
-- 🌍 **中文界面**: 编辑器默认使用中文界面
+## ✨ Key Features
 
-## 🎯 使用场景
+- 🎨 **Full Editor**: Integrated complete draw.io editor with all editing capabilities
+- 📋 **One-Click XML Copy**: Copy edited XML directly to clipboard
+- 🔒 **Privacy First**: All processing happens locally - no data sent to external servers
+- 🚀 **Fast & Lightweight**: Uses official draw.io editor with quick response
+- 🌐 **Cross-Browser**: Supports Chrome, Edge, and other Chromium-based browsers
+- 📁 **Multiple Formats**: Supports `.drawio`, `.drawio.xml`, and `.dio` files
+- 🎯 **Smart Detection**: Automatically detects draw.io files on GitHub, GitLab, and other platforms
+- 💻 **Fully Offline**: Works completely offline after installation
+- 🌍 **Chinese Interface**: Editor defaults to Chinese interface
 
-- 直接在 GitHub/GitLab 上编辑 draw.io 图表，无需下载
-- 编辑后一键复制 XML 内容
-- 在浏览器中快速编辑图表，无需打开完整的 draw.io 应用
-- 完全本地处理，保护数据隐私
+## 🎯 Use Cases
 
-## 📦 安装方法
+- Edit draw.io diagrams directly on GitHub/GitLab without downloading
+- One-click copy of XML content after editing
+- Quick diagram editing in browser without opening full draw.io application
+- Complete local processing to protect data privacy
 
-### 方法一：下载安装包（推荐）
+## 📦 Installation
 
-1. **下载扩展包**
-   - 从 [Releases 页面](https://github.com/yushukk/drawio-viewer/releases) 下载最新的 `drawio-viewer-1.0.0-chrome.zip`
-   - 或者从项目根目录的 `.output/drawio-viewer-1.0.0-chrome.zip` 获取（如果你已经构建过）
+### Method 1: Download Package (Recommended)
 
-2. **解压文件**
+1. **Download Extension Package**
+   - Download the latest `drawio-viewer-1.0.0-chrome.zip` from [Releases page](https://github.com/yushukk/drawio-viewer/releases)
+   - Or get it from `.output/drawio-viewer-1.0.0-chrome.zip` in project root (if you've already built it)
+
+2. **Extract Files**
    ```bash
    unzip drawio-viewer-1.0.0-chrome.zip -d drawio-editor-extension
    ```
 
-3. **安装到浏览器**
+3. **Install to Browser**
    
-   **Chrome/Edge/Brave 等 Chromium 浏览器：**
-   1. 打开浏览器扩展页面：
-      - Chrome: 访问 `chrome://extensions/`
-      - Edge: 访问 `edge://extensions/`
-      - Brave: 访问 `brave://extensions/`
-   2. 开启右上角的「开发者模式」
-   3. 点击「加载已解压的扩展程序」
-   4. 选择刚才解压的 `drawio-editor-extension` 文件夹
-   5. 完成！扩展已安装
+   **Chrome/Edge/Brave and other Chromium browsers:**
+   1. Open browser extensions page:
+      - Chrome: Navigate to `chrome://extensions/`
+      - Edge: Navigate to `edge://extensions/`
+      - Brave: Navigate to `brave://extensions/`
+   2. Enable "Developer mode" in the top right corner
+   3. Click "Load unpacked"
+   4. Select the extracted `drawio-editor-extension` folder
+   5. Done! Extension is installed
 
-### 方法二：从源码构建
+For detailed installation instructions, see [Installation Guide](INSTALLATION.md).
 
-如果你想自己构建扩展：
+### Method 2: Build from Source
 
-1. **克隆仓库**
+If you want to build the extension yourself:
+
+1. **Clone Repository**
    ```bash
    git clone https://github.com/yushukk/drawio-viewer.git
    cd drawio-viewer
    ```
 
-2. **安装依赖**
+2. **Install Dependencies**
    ```bash
    pnpm install
    ```
 
-3. **构建扩展**
+3. **Build Extension**
    ```bash
-   # 构建 Chrome/Edge 版本
+   # Build Chrome/Edge version
    pnpm build
    
-   # 生成安装包（可选）
+   # Generate package (optional)
    pnpm zip
    ```
 
-4. **加载扩展**
-   - 按照「方法一」的第 3 步，选择 `.output/chrome-mv3` 目录
+4. **Load Extension**
+   - Follow step 3 from "Method 1", selecting the `.output/chrome-mv3` directory
 
-## 🚀 使用方法
+## 🚀 Usage
 
-1. **安装扩展**（参考上面的安装方法）
+1. **Install Extension** (see installation methods above)
 
-2. **访问 draw.io 文件**
-   - 在浏览器中打开任何 `.drawio` 文件的 URL
-   - 例如：GitHub 上的 raw 文件链接
+2. **Access draw.io Files**
+   - Open any `.drawio` file URL in your browser
+   - For example: raw file links on GitHub
 
-3. **自动打开编辑器**
-   - 扩展会自动检测并在编辑器中打开图表
-   - 可以直接编辑、修改图表
+3. **Auto-Open Editor**
+   - Extension automatically detects and opens diagrams in the editor
+   - Edit and modify diagrams directly
 
-4. **复制编辑后的 XML**
-   - 编辑完成后，点击右上角的「📋 复制 XML」按钮
-   - XML 内容会自动复制到剪贴板
-   - 可以粘贴到任何需要的地方
+4. **Copy Edited XML**
+   - After editing, click the "📋 Copy XML" button in the top right
+   - XML content is automatically copied to clipboard
+   - Paste wherever needed
 
-### 支持的文件格式
+### Supported File Formats
 
-- `*.drawio` - 标准 draw.io 文件
-- `*.drawio.xml` - XML 格式的 draw.io 文件
-- `*.dio` - draw.io 的另一种扩展名
-- GitHub/GitLab 等平台上包含 draw.io 内容的 raw 文件 URL
+- `*.drawio` - Standard draw.io files
+- `*.drawio.xml` - XML format draw.io files
+- `*.dio` - Alternative draw.io extension
+- Raw file URLs containing draw.io content on GitHub/GitLab and other platforms
 
 ## 🛠️ Development
 
