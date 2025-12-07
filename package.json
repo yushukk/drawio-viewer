@@ -1,0 +1,41 @@
+{
+  "name": "drawio-viewer",
+  "version": "1.0.0",
+  "description": "A privacy-focused browser extension that renders draw.io diagram files locally without sending data to external servers",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "postinstall": "wxt prepare"
+  },
+  "keywords": [
+    "drawio",
+    "diagram",
+    "viewer",
+    "browser-extension",
+    "chrome-extension",
+    "firefox-addon",
+    "privacy",
+    "offline",
+    "wxt"
+  ],
+  "author": "Draw.io Viewer Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/drawio-viewer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/drawio-viewer/issues"
+  },
+  "homepage": "https://github.com/yourusername/drawio-viewer#readme",
+  "packageManager": "pnpm@10.12.4",
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "wxt": "^0.20.11"
+  }
+}
