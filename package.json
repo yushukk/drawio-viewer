@@ -27,12 +27,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/drawio-viewer.git"
+    "url": "https://github.com/yushukk/drawio-viewer.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/drawio-viewer/issues"
+    "url": "https://github.com/yushukk/drawio-viewer/issues"
   },
-  "homepage": "https://github.com/yourusername/drawio-viewer#readme",
+  "homepage": "https://github.com/yushukk/drawio-viewer#readme",
   "packageManager": "pnpm@10.12.4",
   "devDependencies": {
     "typescript": "^5.9.3",

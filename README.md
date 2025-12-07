@@ -33,7 +33,7 @@ A privacy-focused browser extension that renders draw.io diagram files locally i
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/drawio-viewer.git
+git clone https://github.com/yushukk/drawio-viewer.git
 cd drawio-viewer
 ```
 
@@ -167,8 +167,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📮 Contact & Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/drawio-viewer/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/drawio-viewer/discussions)
+- **Issues**: [GitHub Issues](https://github.com/yushukk/drawio-viewer/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yushukk/drawio-viewer/discussions)
 
 ## 🗺️ Roadmap
 
